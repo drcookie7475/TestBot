@@ -29,7 +29,7 @@ client.on("messageCreate", message => {
   if (message.author.bot) return;
   if(message.content.indexOf("0")>=0||message.content.indexOf("1")>=0||message.content.indexOf("2")>=0||message.content.indexOf("3")>=0||message.content.indexOf("4")>=0||message.content.indexOf("5")>=0||message.content.indexOf("6")>=0||message.content.indexOf("7")>=0||message.content.indexOf("8")>=0||message.content.indexOf("9")>=0) {
     
-    //message.channel.send("number detected in message");
+    message.channel.send("number detected in message");
     
     let zero = message.content.indexOf("0");
     let one = message.content.indexOf("1");
@@ -46,7 +46,7 @@ client.on("messageCreate", message => {
     let firstValue = "";
     for (i = 0; i < message.content.length;i++){
           if(message.content[i]==="0"||message.content[i]==="1"||message.content[i]==="2"||message.content[i]==="3"||message.content[i]==="4"||message.content[i]==="5"||message.content[i]==="6"||message.content[i]==="7"||message.content[i]==="8"||message.content[i]==="9"){
-          //message.channel.send("number detected at index" + i);
+          message.channel.send("number detected at index" + i);
           firstValue+=message.content[i];
           
       }
@@ -60,7 +60,7 @@ client.on("messageCreate", message => {
     let secondValue = "";
     for (i = i; i < message.content.length;i++){
           if(message.content[i]==="0"||message.content[i]==="1"||message.content[i]==="2"||message.content[i]==="3"||message.content[i]==="4"||message.content[i]==="5"||message.content[i]==="6"||message.content[i]==="7"||message.content[i]==="8"||message.content[i]==="9"){
-          //message.channel.send("number detected at index" + i);
+          message.channel.send("number detected at index" + i);
           secondValue+=message.content[i];
 
       }
